@@ -11,7 +11,16 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
+  let ans = [];
+  for (let i = 0; i < nums.length; i++) {
+    let left = target - nums[i]
+    let findidx = nums.findIndex(left)
+    if(findidx !== left){
+      ans.push([i, left])
+    }
+  }
 
+  return ans
 };
 // @lc code=end
 
